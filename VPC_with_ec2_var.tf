@@ -9,6 +9,7 @@ resource "aws_instance" "web" {
   subnet_id = aws_subnet.demo_subnet.id
   availability_zone = var.subnet-az
   vpc_security_group_ids = [aws_security_group.demo-vpc-sg.id]
+  #associate_public_ip_address = true #already added under subnet
   tags = {
     Name = "Terraform Test"
   }
